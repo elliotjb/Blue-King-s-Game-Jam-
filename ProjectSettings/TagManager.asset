@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Node
+  - Obstacle
+  - FxTemporaire
+  - PowerUp
+  - Enemy
+  - Obstacle_Orange
+  - Obstacle_Green
+  - Obstacle_Pink
+  - Score_dead
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - PostProcessing
+  - Node
+  - Player
+  - NodeArrive
+  - Obstacle
+  - PowerUp
+  - Enemy
+  - IgnoreLight
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0

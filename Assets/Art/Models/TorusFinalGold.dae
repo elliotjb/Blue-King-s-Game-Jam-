@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset><contributor><author></author><authoring_tool>FBX COLLADA exporter</authoring_tool><comments></comments></contributor><created>2018-06-09T23:46:11Z</created><keywords></keywords><modified>2018-06-09T23:46:11Z</modified><revision></revision><subject></subject><title></title><unit meter="0.010000" name="centimeter"></unit><up_axis>Y_UP</up_axis></asset>
+  <library_materials>
+    <material id="lambert1" name="lambert1">
+      <instance_effect url="#lambert1-fx"/>
+    </material>
+  </library_materials>
+  <library_effects>
+    <effect id="lambert1-fx" name="lambert1">
+      <profile_COMMON>
+        <technique sid="standard">
+          <lambert>
+            <emission>
+              <color sid="emission">0.000000  0.000000 0.000000 1.000000</color>
+            </emission>
+            <ambient>
+              <color sid="ambient">0.000000  0.000000 0.000000 1.000000</color>
+            </ambient>
+            <diffuse>
+              <color sid="diffuse">0.400000  0.400000 0.400000 1.000000</color>
+            </diffuse>
+            <transparent opaque="RGB_ZERO">
+              <color sid="transparent">0.000000  0.000000 0.000000 1.000000</color>
+            </transparent>
+            <transparency>
+              <float sid="transparency">1.000000</float>
+            </transparency>
+          </lambert>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_geometries>
+    <geometry id="TorusGood1-lib" name="TorusGood1Mesh">
+      <mesh>
+        <source id="TorusGood1-POSITION">
+          <float_array id="TorusGood1-POSITION-array" count="54">
+3.254892 -0.000000 0.683792
+3.654892 -0.000000 -0.009028
+3.304892 0.173205 0.770395
+3.754892 0.173205 -0.009028
+3.404892 0.173205 0.943600
+3.954892 0.173205 -0.009028
+3.454892 -0.000000 1.030203
+4.054893 -0.000000 -0.009028
+3.404892 -0.173205 0.943600
+3.954892 -0.173205 -0.009028
+3.304892 -0.173205 0.770395
+3.754892 -0.173205 -0.009028
+2.454892 0.000000 0.683792
+2.404892 0.173205 0.770395
+2.304892 0.173205 0.943600
+2.254892 -0.000000 1.030203
+2.304892 -0.173205 0.943600
+2.404892 -0.173205 0.770395
+</float_array>
+          <technique_common>
+            <accessor source="#TorusGood1-POSITION-array" count="18" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TorusGood1-Normal0">
+          <float_array id="TorusGood1-Normal0-array" count="288">
+0.000000 0.447214 -0.894427
+0.000000 0.447214 -0.894427
+0.000000 0.447214 -0.894427
+0.000000 0.447214 -0.894427
+0.000000 0.447214 -0.894427
+0.000000 0.447214 -0.894427
+-0.774597 0.447213 -0.447214
+-0.774597 0.447213 -0.447214
+-0.774597 0.447213 -0.447214
+-0.774597 0.447213 -0.447214
+-0.774597 0.447213 -0.447214
+-0.774597 0.447213 -0.447214
+-0.000000 1.000000 0.000000
+-0.000000 1.000000 0.000000
+-0.000000 1.000000 0.000000
+-0.000000 1.000000 0.000000
+-0.000000 1.000000 0.000000
+-0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+0.000000 1.000000 0.000000
+-0.000000 0.447213 0.894427
+-0.000000 0.447213 0.894427
+-0.000000 0.447213 0.894427
+-0.000000 0.447213 0.894427
+-0.000000 0.447213 0.894427
+-0.000000 0.447213 0.894427
+0.774596 0.447215 0.447213
+0.774596 0.447215 0.447213
+0.774596 0.447215 0.447213
+0.774596 0.447215 0.447213
+0.774596 0.447215 0.447213
+0.774596 0.447215 0.447213
+0.000000 -0.447214 0.894427
+0.000000 -0.447214 0.894427
+0.000000 -0.447214 0.894427
+0.000000 -0.447214 0.894427
+0.000000 -0.447214 0.894427
+0.000000 -0.447214 0.894427
+0.774596 -0.447214 0.447214
+0.774596 -0.447214 0.447213
+0.774596 -0.447214 0.447214
+0.774596 -0.447214 0.447213
+0.774596 -0.447214 0.447214
+0.774596 -0.447214 0.447214
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+-0.000000 -1.000000 -0.000000
+-0.000000 -1.000000 -0.000000
+-0.000000 -1.000000 -0.000000
+-0.000000 -1.000000 -0.000000
+-0.000000 -1.000000 -0.000000
+-0.000000 -1.000000 -0.000000
+0.000000 -0.447214 -0.894427
+0.000000 -0.447214 -0.894427
+0.000000 -0.447214 -0.894427
+0.000000 -0.447214 -0.894427
+0.000000 -0.447214 -0.894427
+0.000000 -0.447214 -0.894427
+-0.774597 -0.447213 -0.447214
+-0.774597 -0.447213 -0.447214
+-0.774597 -0.447213 -0.447214
+-0.774597 -0.447213 -0.447214
+-0.774597 -0.447213 -0.447214
+-0.774597 -0.447213 -0.447214
+-0.866025 0.000000 -0.500000
+-0.866025 0.000000 -0.500000
+-0.866025 0.000000 -0.500000
+-0.866025 0.000000 -0.500000
+-0.866025 0.000000 -0.500000
+-0.866025 0.000000 -0.500000
+-0.866025 0.000000 -0.500000
+-0.866025 0.000000 -0.500000
+-0.866025 0.000000 -0.500000
+-0.866025 0.000000 -0.500000
+-0.866025 0.000000 -0.500000
+-0.866025 0.000000 -0.500000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+0.000000 0.000000 -1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#TorusGood1-Normal0-array" count="96" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TorusGood1-UV0">
+          <float_array id="TorusGood1-UV0-array" count="42">
+0.666667 1.000000
+0.500000 1.000000
+0.500000 0.833333
+0.666667 0.833333
+0.833333 1.000000
+0.833333 0.833333
+0.500000 0.666667
+0.666667 0.666667
+0.833333 0.666667
+0.500000 0.500000
+0.666667 0.500000
+0.833333 0.500000
+0.500000 0.333333
+0.666667 0.333333
+0.833333 0.333333
+0.500000 0.166667
+0.666667 0.166667
+0.833333 0.166667
+0.500000 -0.000000
+0.666667 -0.000000
+0.833333 -0.000000
+</float_array>
+          <technique_common>
+            <accessor source="#TorusGood1-UV0-array" count="21" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="TorusGood1-VERTEX">
+          <input semantic="POSITION" source="#TorusGood1-POSITION"/>
+        </vertices>
+        <triangles count="32" material="lambert1"><input semantic="VERTEX" offset="0" source="#TorusGood1-VERTEX"/><input semantic="NORMAL" offset="1" source="#TorusGood1-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#TorusGood1-UV0"/><p> 0 0 0 12 1 1 13 2 2 0 3 0 13 4 2 2 5 3 0 6 0 3 7 5 1 8 4 3 9 5 0 10 0 2 11 3 4 12 7 13 13 2 14 14 6 13 15 2 4 16 7 2 17 3 2 18 3 5 19 8 3 20 5 5 21 8 2 22 3 4 23 7 4 24 7 14 25 6 15 26 9 4 27 7 15 28 9 6 29 10 4 30 7 7 31 11 5 32 8 7 33 11 4 34 7 6 35 10 6 36 10 15 37 9 16 38 12 6 39 10 16 40 12 8 41 13 8 42 13 7 43 11 6 44 10 7 45 11 8 46 13 9 47 14 17 48 15 8 49 13 16 50 12 8 51 13 17 52 15 10 53 16 9 54 14 8 55 13 10 56 16 9 57 14 10 58 16 11 59 17 17 60 15 0 61 19 10 62 16 0 63 19 17 64 15 12 65 18 0 66 19 11 67 17 10 68 16 11 69 17 0 70 19 1 71 20 15 72 9 17 73 15 16 74 12 12 75 18 15 76 9 14 77 6 12 78 18 14 79 6 13 80 2 17 81 15 15 82 9 12 83 18 9 84 14 5 85 8 7 86 11 5 87 8 11 88 17 1 89 4 1 90 4 3 91 5 5 92 8 11 93 17 5 94 8 9 95 14</p></triangles>
+      </mesh>
+    </geometry>
+    <geometry id="TorusGood2-lib" name="TorusGood2Mesh">
+      <mesh>
+        <source id="TorusGood2-POSITION">
+          <float_array id="TorusGood2-POSITION-array" count="54">
+3.320716 0.000000 -0.974665
+3.370716 0.173205 -1.061267
+3.470716 0.173205 -1.234472
+3.520716 -0.000000 -1.321075
+3.470716 -0.173205 -1.234472
+3.370716 -0.173205 -1.061267
+2.470716 0.173205 -1.061267
+2.520716 0.000000 -0.974665
+3.720716 -0.000000 -0.281844
+3.820716 0.173205 -0.281844
+2.370716 0.173205 -1.234472
+4.020716 0.173205 -0.281844
+2.320716 -0.000000 -1.321075
+4.120716 -0.000000 -0.281844
+2.370716 -0.173205 -1.234472
+4.020716 -0.173205 -0.281844
+2.470716 -0.173205 -1.061267
+3.820716 -0.173205 -0.281844
+</float_array>
+          <technique_common>
+            <accessor source="#TorusGood2-POSITION-array" count="18" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TorusGood2-Normal0">
+          <float_array id="TorusGood2-Normal0-array" count="288">
+-0.000000 0.447214 0.894427
+-0.000000 0.447214 0.894427
+-0.000000 0.447214 0.894427
+-0.000000 0.447214 0.894427
+-0.000000 0.447214 0.894427
+-0.000000 0.447214 0.894427
+-0.774597 0.447213 0.447214
+-0.774597 0.447213 0.447214
+-0.774597 0.447213 0.447214
+-0.774597 0.447213 0.447214
+-0.774597 0.447213 0.447214
+-0.774597 0.447213 0.447214
+0.000000 1.000000 -0.000000
+0.000000 1.000000 -0.000000
+0.000000 1.000000 -0.000000
+0.000000 1.000000 -0.000000
+0.000000 1.000000 -0.000000
+0.000000 1.000000 -0.000000
+0.000000 1.000000 -0.000000
+0.000000 1.000000 -0.000000
+0.000000 1.000000 -0.000000
+0.000000 1.000000 -0.000000
+0.000000 1.000000 -0.000000
+0.000000 1.000000 -0.000000
+0.000000 0.447214 -0.894427
+0.000000 0.447214 -0.894427
+0.000000 0.447214 -0.894427
+0.000000 0.447214 -0.894427
+0.000000 0.447214 -0.894427
+0.000000 0.447214 -0.894427
+0.774596 0.447215 -0.447213
+0.774596 0.447215 -0.447213
+0.774596 0.447215 -0.447213
+0.774596 0.447215 -0.447213
+0.774596 0.447215 -0.447213
+0.774596 0.447215 -0.447213
+0.000000 -0.447214 -0.894427
+0.000000 -0.447214 -0.894427
+0.000000 -0.447214 -0.894427
+0.000000 -0.447214 -0.894427
+0.000000 -0.447214 -0.894427
+0.000000 -0.447214 -0.894427
+0.774596 -0.447215 -0.447213
+0.774596 -0.447215 -0.447213
+0.774596 -0.447215 -0.447213
+0.774596 -0.447215 -0.447213
+0.774596 -0.447215 -0.447213
+0.774596 -0.447215 -0.447213
+-0.000000 -1.000000 0.000000
+-0.000000 -1.000000 0.000000
+-0.000000 -1.000000 0.000000
+-0.000000 -1.000000 0.000000
+-0.000000 -1.000000 0.000000
+-0.000000 -1.000000 0.000000
+-0.000000 -1.000000 0.000000
+-0.000000 -1.000000 0.000000
+-0.000000 -1.000000 0.000000
+-0.000000 -1.000000 0.000000
+-0.000000 -1.000000 0.000000
+-0.000000 -1.000000 0.000000
+-0.000000 -0.447214 0.894427
+-0.000000 -0.447214 0.894427
+-0.000000 -0.447214 0.894427
+-0.000000 -0.447214 0.894427
+-0.000000 -0.447214 0.894427
+-0.000000 -0.447214 0.894427
+-0.774597 -0.447213 0.447214
+-0.774597 -0.447213 0.447214
+-0.774597 -0.447213 0.447214
+-0.774597 -0.447213 0.447214
+-0.774597 -0.447213 0.447214
+-0.774597 -0.447213 0.447214
+-0.866025 -0.000000 0.500000
+-0.866025 -0.000000 0.500000
+-0.866025 -0.000000 0.500000
+-0.866025 -0.000000 0.500000
+-0.866025 -0.000000 0.500000
+-0.866025 -0.000000 0.500000
+-0.866025 -0.000000 0.500000
+-0.866025 -0.000000 0.500000
+-0.866025 -0.000000 0.500000
+-0.866025 -0.000000 0.500000
+-0.866025 -0.000000 0.500000
+-0.866025 -0.000000 0.500000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+0.000000 0.000000 1.000000
+</float_array>
+          <technique_common>
+            <accessor source="#TorusGood2-Normal0-array" count="96" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TorusGood2-UV0">
+          <float_array id="TorusGood2-UV0-array" count="56">
+0.166667 1.000000
+0.000000 1.000000
+0.000000 0.833333
+0.166667 0.833333
+1.000000 1.000000
+0.833333 1.000000
+0.833333 0.833333
+1.000000 0.833333
+0.000000 0.666667
+0.166667 0.666667
+0.833333 0.666667
+1.000000 0.666667
+0.000000 0.500000
+0.166667 0.500000
+0.833333 0.500000
+1.000000 0.500000
+0.000000 0.333333
+0.166667 0.333333
+0.833333 0.333333
+1.000000 0.333333
+0.000000 0.166667
+0.166667 0.166667
+0.833333 0.166667
+1.000000 0.166667
+0.000000 -0.000000
+0.166667 -0.000000
+0.833333 -0.000000
+1.000000 -0.000000
+</float_array>
+          <technique_common>
+            <accessor source="#TorusGood2-UV0-array" count="28" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="TorusGood2-VERTEX">
+          <input semantic="POSITION" source="#TorusGood2-POSITION"/>
+        </vertices>
+        <triangles count="32" material="lambert1"><input semantic="VERTEX" offset="0" source="#TorusGood2-VERTEX"/><input semantic="NORMAL" offset="1" source="#TorusGood2-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#TorusGood2-UV0"/><p> 6 0 3 0 1 1 1 2 2 0 3 1 6 4 3 7 5 0 9 6 6 0 7 4 8 8 5 9 9 6 1 10 7 0 11 4 6 12 3 1 13 2 2 14 8 6 15 3 2 16 8 10 17 9 11 18 10 2 19 11 1 20 7 11 21 10 1 22 7 9 23 6 12 24 13 2 25 8 3 26 12 2 27 8 12 28 13 10 29 9 13 30 14 2 31 11 11 32 10 13 33 14 3 34 15 2 35 11 12 36 13 3 37 12 4 38 16 12 39 13 4 40 16 14 41 17 13 42 14 4 43 19 3 44 15 4 45 19 13 46 14 15 47 18 4 48 16 16 49 21 14 50 17 16 51 21 4 52 16 5 53 20 15 54 18 5 55 23 4 56 19 5 57 23 15 58 18 17 59 22 16 60 21 5 61 20 0 62 24 16 63 21 0 64 24 7 65 25 17 66 22 0 67 27 5 68 23 0 69 27 17 70 22 8 71 26 16 72 21 7 73 0 14 74 17 7 75 0 12 76 13 14 77 17 10 78 9 7 79 0 6 80 3 12 81 13 7 82 0 10 83 9 13 84 14 8 85 26 17 86 22 8 87 26 13 88 14 11 89 10 11 90 10 9 91 6 8 92 26 13 93 14 17 94 22 15 95 18</p></triangles>
+      </mesh>
+    </geometry>
+    <geometry id="TorusGood3-lib" name="TorusGood3Mesh">
+      <mesh>
+        <source id="TorusGood3-POSITION">
+          <float_array id="TorusGood3-POSITION-array" count="72">
+2.263705 0.000000 -0.821539
+2.213705 0.173205 -0.908142
+2.113704 0.173205 -1.081347
+2.063704 -0.000000 -1.167949
+2.113704 -0.173205 -1.081347
+2.213705 -0.173205 -0.908142
+1.863704 -0.000000 -0.128719
+1.763705 0.173205 -0.128719
+1.563704 0.173205 -0.128719
+1.463704 -0.000000 -0.128719
+1.563704 -0.173205 -0.128719
+1.763705 -0.173205 -0.128719
+2.263705 -0.000000 -0.821539
+2.213705 0.173205 -0.908142
+2.213704 0.173205 0.650704
+2.263704 0.000000 0.564102
+2.113704 0.173205 -1.081347
+2.113704 0.173205 0.823909
+2.063704 -0.000000 -1.167949
+2.063704 -0.000000 0.910512
+2.113704 -0.173205 -1.081347
+2.113704 -0.173205 0.823909
+2.213705 -0.173205 -0.908142
+2.213704 -0.173205 0.650704
+</float_array>
+          <technique_common>
+            <accessor source="#TorusGood3-POSITION-array" count="24" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TorusGood3-Normal0">
+          <float_array id="TorusGood3-Normal0-array" count="252">
+0.866025 0.000000 -0.500000
+0.866025 0.000000 -0.500000
+0.866025 0.000000 -0.500000
+0.866025 0.000000 -0.500000
+0.866025 0.000000 -0.500000
+0.866025 0.000000 -0.500000
+0.866025 0.000000 -0.500000
+0.866025 0.000000 -0.500000
+0.866025 0.000000 -0.500000
+0.866025 0.000000 -0.500000
+0.866025 0.000000 -0.500000
+0.866025 0.000000 -0.500000
+0.774597 0.447214 0.447214
+0.774597 0.447214 0.447214
+0.774597 0.447214 0.447214
+0.774597 0.447214 0.447214
+0.774597 0.447214 0.447214
+0.774597 0.447214 0.447214
+0.774597 0.447214 -0.447213
+0.774597 0.447214 -0.447213
+0.774597 0.447214 -0.447213
+0.774597 0.447214 -0.447213
+0.774597 0.447214 -0.447213
+0.774597 0.447214 -0.447213
+-0.000000 1.000000 -0.000000
+-0.000000 1.000000 -0.000000
+-0.000000 1.000000 -0.000000
+-0.000000 1.000000 -0.000000
+-0.000000 1.000000 -0.000000
+-0.000000 1.000000 -0.000000
+-0.000000 1.000000 0.000000
+-0.000000 1.000000 0.000000
+-0.000000 1.000000 0.000000
+-0.000000 1.000000 0.000000
+-0.000000 1.000000 0.000000
+-0.000000 1.000000 0.000000
+-0.774596 0.447214 -0.447214
+-0.774597 0.447214 -0.447214
+-0.774597 0.447214 -0.447214
+-0.774597 0.447214 -0.447214
+-0.774596 0.447214 -0.447214
+-0.774596 0.447214 -0.447214
+-0.774597 0.447214 0.447213
+-0.774597 0.447214 0.447213
+-0.774597 0.447214 0.447213
+-0.774597 0.447214 0.447213
+-0.774597 0.447214 0.447213
+-0.774597 0.447214 0.447213
+-0.774597 -0.447214 -0.447214
+-0.774596 -0.447214 -0.447214
+-0.774597 -0.447214 -0.447214
+-0.774597 -0.447214 -0.447214
+-0.774596 -0.447214 -0.447214
+-0.774597 -0.447214 -0.447214
+-0.774597 -0.447214 0.447213
+-0.774597 -0.447214 0.447213
+-0.774597 -0.447214 0.447213
+-0.774597 -0.447214 0.447213
+-0.774597 -0.447214 0.447213
+-0.774596 -0.447214 0.447213
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 0.000000
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+0.000000 -1.000000 -0.000000
+0.774597 -0.447214 0.447214
+0.774597 -0.447214 0.447214
+0.774597 -0.447214 0.447214
+0.774597 -0.447214 0.447214
+0.774597 -0.447214 0.447214
+0.774597 -0.447214 0.447214
+0.774597 -0.447214 -0.447213
+0.774597 -0.447214 -0.447213
+0.774597 -0.447214 -0.447213
+0.774597 -0.447214 -0.447213
+0.774597 -0.447214 -0.447213
+0.774597 -0.447214 -0.447213
+</float_array>
+          <technique_common>
+            <accessor source="#TorusGood3-Normal0-array" count="84" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TorusGood3-UV0">
+          <float_array id="TorusGood3-UV0-array" count="54">
+0.166667 0.833333
+0.166667 -0.000000
+0.166667 0.166667
+0.166667 0.333333
+0.166667 0.500000
+0.166667 0.666667
+0.333333 1.000000
+0.166667 1.000000
+0.166667 0.833333
+0.333333 0.833333
+0.500000 1.000000
+0.500000 0.833333
+0.166667 0.666667
+0.333333 0.666667
+0.500000 0.666667
+0.166667 0.500000
+0.333333 0.500000
+0.500000 0.500000
+0.166667 0.333333
+0.333333 0.333333
+0.500000 0.333333
+0.166667 0.166667
+0.333333 0.166667
+0.500000 0.166667
+0.166667 -0.000000
+0.333333 -0.000000
+0.500000 -0.000000
+</float_array>
+          <technique_common>
+            <accessor source="#TorusGood3-UV0-array" count="27" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="TorusGood3-VERTEX">
+          <input semantic="POSITION" source="#TorusGood3-POSITION"/>
+        </vertices>
+        <triangles count="28" material="lambert1"><input semantic="VERTEX" offset="0" source="#TorusGood3-VERTEX"/><input semantic="NORMAL" offset="1" source="#TorusGood3-Normal0"/><input semantic="TEXCOORD" offset="2" set="0" source="#TorusGood3-UV0"/><p> 4 0 3 0 1 1 5 2 2 0 3 1 2 4 5 1 5 0 0 6 1 3 7 4 2 8 5 3 9 4 0 10 1 4 11 3 7 12 9 12 13 7 13 14 8 12 15 7 7 16 9 6 17 6 7 18 9 14 19 11 15 20 10 15 21 10 6 22 6 7 23 9 16 24 12 8 25 13 7 26 9 16 27 12 7 28 9 13 29 8 7 30 9 17 31 14 14 32 11 17 33 14 7 34 9 8 35 13 9 36 16 16 37 12 18 38 15 16 39 12 9 40 16 8 41 13 9 42 16 19 43 17 17 44 14 17 45 14 8 46 13 9 47 16 20 48 18 10 49 19 9 50 16 9 51 16 18 52 15 20 53 18 21 54 20 9 55 16 10 56 19 9 57 16 21 58 20 19 59 17 20 60 18 11 61 22 10 62 19 11 63 22 20 64 18 22 65 21 21 66 20 10 67 19 11 68 22 21 69 20 11 70 22 23 71 23 12 72 24 6 73 25 11 74 22 11 75 22 22 76 21 12 77 24 15 78 26 11 79 22 6 80 25 11 81 22 15 82 26 23 83 23</p></triangles>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="TorusFinalGold" name="TorusFinalGold">
+      <node name="pTorus1" id="pTorus1" sid="pTorus1"><matrix sid="matrix">1.000000 0.000000 0.000000 2.920716 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="polySurface2" id="polySurface2" sid="polySurface2"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 -0.281844 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="transform5" id="transform5" sid="transform5"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>0.000000</visibility></technique></extra></node></node><node name="polySurface3" id="polySurface3" sid="polySurface3"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="polySurface4" id="polySurface4" sid="polySurface4"><matrix sid="matrix">1.000000 0.000000 0.000000 -0.257012 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 -0.128719 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="transform6" id="transform6" sid="transform6"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>0.000000</visibility></technique></extra></node></node><node name="polySurface5" id="polySurface5" sid="polySurface5"><matrix sid="matrix">1.000000 0.000000 0.000000 -0.065824 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 -0.009028 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="transform7" id="transform7" sid="transform7"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>0.000000</visibility></technique></extra></node></node><node name="transform4" id="transform4" sid="transform4"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>0.000000</visibility></technique></extra></node></node></node>
+      <node name="polySurface5_ncl1_1" id="polySurface5_ncl1_1" sid="polySurface5_ncl1_1"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="polySurface6" id="polySurface6" sid="polySurface6"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="transform10" id="transform10" sid="transform10"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>0.000000</visibility></technique></extra></node></node><node name="polySurface7" id="polySurface7" sid="polySurface7"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="polySurface8" id="polySurface8" sid="polySurface8"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="transform11" id="transform11" sid="transform11"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>0.000000</visibility></technique></extra></node></node><node name="polySurface9" id="polySurface9" sid="polySurface9"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="transform12" id="transform12" sid="transform12"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>0.000000</visibility></technique></extra></node></node><node name="transform9" id="transform9" sid="transform9"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>0.000000</visibility></technique></extra></node></node><node name="transform8" id="transform8" sid="transform8"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>0.000000</visibility></technique></extra></node></node>
+      <node name="polySurface9_ncl1_1" id="polySurface9_ncl1_1" sid="polySurface9_ncl1_1"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="polySurface10" id="polySurface10" sid="polySurface10"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="transform16" id="transform16" sid="transform16"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>0.000000</visibility></technique></extra></node></node><node name="polySurface12" id="polySurface12" sid="polySurface12"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="transform15" id="transform15" sid="transform15"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>0.000000</visibility></technique></extra></node></node><node name="polySurface13" id="polySurface13" sid="polySurface13"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra><node name="TorusGood1" id="TorusGood1" sid="TorusGood1"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#TorusGood1-lib"><bind_material><technique_common><instance_material symbol="lambert1" target="#lambert1"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="TorusGood2" id="TorusGood2" sid="TorusGood2"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#TorusGood2-lib"><bind_material><technique_common><instance_material symbol="lambert1" target="#lambert1"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node><node name="transform14" id="transform14" sid="transform14"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>0.000000</visibility></technique></extra></node></node><node name="transform13" id="transform13" sid="transform13"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><extra><technique profile="FCOLLADA"><visibility>0.000000</visibility></technique></extra></node></node>
+      <node name="TorusGood3" id="TorusGood3" sid="TorusGood3"><matrix sid="matrix">1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000 0.000000 0.000000 0.000000 0.000000 1.000000</matrix><instance_geometry url="#TorusGood3-lib"><bind_material><technique_common><instance_material symbol="lambert1" target="#lambert1"/></technique_common></bind_material></instance_geometry><extra><technique profile="FCOLLADA"><visibility>1.000000</visibility></technique></extra></node>
+      <extra><technique profile="MAX3D"><frame_rate>24.000000</frame_rate></technique><technique profile="FCOLLADA"><start_time>0.041667</start_time><end_time>8.333333</end_time></technique></extra>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#TorusFinalGold"></instance_visual_scene>
+  </scene>
+</COLLADA>
