@@ -153,16 +153,20 @@ public class Player : MonoBehaviour
         {
             case StatePlayer.IN_NODE:
                 {
-                    if (Input.GetKeyDown(KeyCode.Space) && startGame && !tutorial_active && evo_provider.show == false)
+                    if (startGame && !tutorial_active && evo_provider.show == false)
                     {
-                        GetComponent<TrailRenderer>().enabled = true;
-                        direction = next_position - initial_position;
-                        GetComponent<Rigidbody>().AddForce(direction.normalized * (velocity + evo_controller.ExtraSpeed()) * Time.deltaTime, ForceMode.Impulse);
+                        //Differentiate between SPACEBAR (PC Control) and SCREEN TOUCH (Mobile Control)
+                        if (Input.GetKeyDown(KeyCode.Space) || (Input.touchCount == 1 && Input.GetTouch(0).phase == TouchPhase.Began))
+                        {
+                            GetComponent<TrailRenderer>().enabled = true;
+                            direction = next_position - initial_position;
+                            GetComponent<Rigidbody>().AddForce(direction.normalized * (velocity + evo_controller.ExtraSpeed()) * Time.deltaTime, ForceMode.Impulse);
 
-                        //Set animation to MOVING
-                        GetComponent<Animator>().SetFloat("Speed", 1.0f);
+                            //Set animation to MOVING
+                            GetComponent<Animator>().SetFloat("Speed", 1.0f);
 
-                        state = StatePlayer.MOVING;
+                            state = StatePlayer.MOVING;
+                        }
                     }
                     break;
                 }
