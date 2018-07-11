@@ -127,6 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 225ac44e191c88c4196379c98ef8a4d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  used: 0
 --- !u!114 &114254835994302534
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -138,44 +139,168 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8039dca41ae2bee448be8d69fc1858b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObstaclesPool:
-  - {fileID: 0}
-  - {fileID: 1811810341353000, guid: b5c590a266bac4e4e984447a3685c3a8, type: 2}
-  - {fileID: 1811810341353000, guid: 3f410c3469bc09f4cb07cabe8df19b12, type: 2}
-  - {fileID: 1811810341353000, guid: 0c260104a4c1a27429a563ad7515b6b2, type: 2}
-  - {fileID: 1247444287621764, guid: 1e333ec4a8d2e5f48a1150cd8d1501d8, type: 2}
-  - {fileID: 1216389821657444, guid: 70b00a93dd62a564493a506217ff9631, type: 2}
-  - {fileID: 1457889958234782, guid: 56b64c073c25397469f102e2ba2f9c69, type: 2}
-  - {fileID: 1694180605099176, guid: 90cc09983f53fb044abf015bbf0e3348, type: 2}
-  - {fileID: 1245613016632670, guid: 6c1f696507ee19349928063effdbbab8, type: 2}
-  - {fileID: 1620203859629482, guid: 1a75468613a1961428bee18850dfc993, type: 2}
+  ObstaclesPool: {fileID: 11400000, guid: e0c9c56189fc9c741a6a6a61cc13ff02, type: 2}
   evolution_active: 0
   NumofLayers: 1
   ObstaclesArray:
   - obstaclesepparation: 180
+    base_speed: 1
+    speed_curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 5
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
     offset_to_node: 1.5
-    rotation_speed: 7
-    obstacle_list:
-    - {fileID: 0}
-    - {fileID: 0}
-    obstaclesstring: 1,1
+    offset_curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 5
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    obstacles_string: 
     clock_direction: 0
   - obstaclesepparation: 90
+    base_speed: 1
+    speed_curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 5
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
     offset_to_node: 2.5
-    rotation_speed: 13.9
-    obstacle_list:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    obstaclesstring: 3,3,3,3
+    offset_curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 5
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    obstacles_string: 
     clock_direction: 1
   - obstaclesepparation: 1
+    base_speed: 1
+    speed_curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 5
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
     offset_to_node: 4
-    rotation_speed: 16
-    obstacle_list:
-    - {fileID: 0}
-    obstaclesstring: 9
+    offset_curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 5
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    obstacles_string: 
     clock_direction: 0
 --- !u!135 &135402425625748772
 SphereCollider:

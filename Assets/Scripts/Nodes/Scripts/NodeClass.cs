@@ -83,7 +83,7 @@ public class ObstacleLayer : System.Object
 public class NodeClass : MonoBehaviour
 {
 
-    public GameObject[] ObstaclesPool = new GameObject[1];
+    [SerializeField] ObstaclePool ObstaclesPool;
     public bool evolution_active = false;
 
     public int NumofLayers = 1;
@@ -195,7 +195,7 @@ public class NodeClass : MonoBehaviour
                 int.TryParse(obstacle, out obsvalue);
 
 
-                if (!(obsvalue <= 0 || obsvalue >= ObstaclesPool.Length))
+                if (!(obsvalue <= 0 || obsvalue >= ObstaclesPool.ObstaclesPool.Length))
                 {
                     Quaternion rot = Quaternion.identity;
                     if (obsvalue == 4) //star and shield
@@ -206,7 +206,7 @@ public class NodeClass : MonoBehaviour
                     {
                         rot = Quaternion.Euler(new Vector3(90, 0, 0));
                     }
-                    GameObject Obstacle = Instantiate(ObstaclesPool[obsvalue], trans, rot);
+                    GameObject Obstacle = Instantiate(ObstaclesPool.ObstaclesPool[obsvalue], trans, rot);
                     float angle = (i * item.obstacleSepparation);
                     Obstacle.transform.RotateAround(transform.position, Vector3.forward, angle);
                     Obstacle.GetComponent<ObstacleScript>().nodePosition = transform.position;
@@ -286,7 +286,7 @@ public class NodeClass : MonoBehaviour
                 if (obsvalue != 0)
                 {
 
-                    float size = (ObstaclesPool[obsvalue] == null) ? 0.5f : ObstaclesPool[obsvalue].transform.localScale.x;//star and shield
+                    float size = (ObstaclesPool.ObstaclesPool[obsvalue] == null) ? 0.5f : ObstaclesPool.ObstaclesPool[obsvalue].transform.localScale.x;//star and shield
                     float angle = (i * item.obstacleSepparation);
                     Vector3 dir = trans - transform.position; // get point direction relative to pivot
                     dir = Quaternion.Euler(0, 0, angle) * dir; // rotate it
