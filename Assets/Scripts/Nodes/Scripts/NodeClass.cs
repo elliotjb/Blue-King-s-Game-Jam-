@@ -110,7 +110,6 @@ public class NodeClass : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.K))
         {
             CreateObstacles();
-
         }
     }
     void ResizeObjLayer()
@@ -123,6 +122,11 @@ public class NodeClass : MonoBehaviour
     }
     public void ClearObstacles()
     {
+        if (ObstaclesArray.Length == 0)
+        {
+            return;
+        }
+
         foreach (ObstacleLayer item in ObstaclesArray)
         {
             foreach (GameObject obj in item.obstacleList)
@@ -180,6 +184,12 @@ public class NodeClass : MonoBehaviour
     public void CreateObstacles()
     {
         float offset_acumulation = 0.0f;
+
+        if (ObstaclesArray.Length == 0)
+        {
+            return;
+        }
+
         foreach (ObstacleLayer item in ObstaclesArray)
         {
 

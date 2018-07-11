@@ -37,7 +37,7 @@ public class NodeManager : MonoBehaviour {
         node_lvl_count--;
 
         current_node = NodeList[0];
-        current_node.GetComponent<NodeClass>().ClearObstacles();
+        //current_node.GetComponent<NodeClass>().ClearObstacles();
         next_node = NodeList[1];
         target.transform.position = next_node.transform.position;
     }
