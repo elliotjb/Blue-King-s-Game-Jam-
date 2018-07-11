@@ -2,18 +2,86 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 [System.Serializable]
 public class ObstacleLayer : System.Object
 {
-    [Range(1.0f, 360.0f)] public float obstaclesepparation = 1.0f;
-    [Range(1.0f, 10.0f)] public float offset_to_node = 1.0f;
-    [Range(1.0f, 60.0f)] public float rotation_speed = 1.0f;
-    public List<GameObject> obstacle_list;
-    public string obstaclesstring;
+    [Range(1.0f, 360.0f)] [SerializeField] private float obstaclesepparation = 1.0f;
+
+    [Range(1.0f, 60.0f)] [SerializeField] private float base_speed = 1.0f;
+    [SerializeField] AnimationCurve speed_curve = AnimationCurve.Linear(0.0f, 1.0f, 5.0f, 1.0f);
+
+    [Range(1.0f, 10.0f)] [SerializeField] private float offset_to_node = 1.0f;
+    [SerializeField] AnimationCurve offset_curve = AnimationCurve.Linear(0.0f, 1.0f, 5.0f, 1.0f);
+
+
+    private List<GameObject> obstacle_list;
+    [SerializeField] private string obstacles_string;
     public bool clock_direction;
 
+    public string obstaclesString
+    {
+        get { return obstacles_string; }
+
+    }
+    public List<GameObject> obstacleList
+    {
+        get { return obstacle_list; }
+        set { obstacle_list = value; }
+    }
+    public float obstacleSepparation
+    {
+        get { return obstaclesepparation; }
+    }
+    public float rotationSpeed
+    {
+        get { return base_speed; }
+    }
+    public AnimationCurve speedCurve
+    {
+        get { return speed_curve; }
+    }
+    public bool useSpeedCurve
+    {
+        get
+        {
+            float value = speedCurve[0].value;
+            for (int i = 1; i < speedCurve.length; i++)
+            {
+                if (value != speedCurve[i].value)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+    }
+    public float offsetToNode
+    {
+        get { return offset_to_node; }
+    }
+    public AnimationCurve offsetCurve
+    {
+        get { return offset_curve; }
+    }
+    public bool useoffsetCurve
+    {
+        get
+        {
+            float value = offsetCurve[0].value;
+            for (int i = 1; i < offsetCurve.length; i++)
+            {
+                if (value != offsetCurve[i].value)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+    }
 }
-public class NodeClass : MonoBehaviour {
+public class NodeClass : MonoBehaviour
+{
 
     public GameObject[] ObstaclesPool = new GameObject[1];
     public bool evolution_active = false;
@@ -29,34 +97,35 @@ public class NodeClass : MonoBehaviour {
 
         foreach (ObstacleLayer obj in ObstaclesArray)
         {
-            obj.obstacle_list = new List<GameObject>();
+            obj.obstacleList = new List<GameObject>();
         }
 
         ClearObstacles();
         CreateObstacles();
     }
-	
-	// Update is called once per frame
-	void Update () {
-		if (Input.GetKeyDown(KeyCode.K))
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.K))
         {
             CreateObstacles();
 
         }
-	}
+    }
     void ResizeObjLayer()
     {
         ObstaclesArray = new ObstacleLayer[NumofLayers];
         foreach (ObstacleLayer obj in ObstaclesArray)
         {
-            obj.obstacle_list = new List<GameObject>();
+            obj.obstacleList = new List<GameObject>();
         }
     }
     public void ClearObstacles()
     {
         foreach (ObstacleLayer item in ObstaclesArray)
         {
-            foreach (GameObject obj in item.obstacle_list)
+            foreach (GameObject obj in item.obstacleList)
             {
                 if (obj.activeInHierarchy == true)
                 {
@@ -75,7 +144,7 @@ public class NodeClass : MonoBehaviour {
                     Destroy(obj);
                 }
             }
-            item.obstacle_list.Clear();
+            item.obstacleList.Clear();
             //Create obstacles
         }
     }
@@ -83,7 +152,7 @@ public class NodeClass : MonoBehaviour {
     {
         foreach (ObstacleLayer obj in ObstaclesArray)
         {
-            foreach (GameObject item in obj.obstacle_list)
+            foreach (GameObject item in obj.obstacleList)
             {
                 item.GetComponent<ObstacleScript>().LastAngle = item.GetComponent<ObstacleScript>().Angle;
                 item.GetComponent<ObstacleScript>().Angle = item.GetComponent<ObstacleScript>().Angle / speed;
@@ -95,7 +164,7 @@ public class NodeClass : MonoBehaviour {
     {
         foreach (ObstacleLayer obj in ObstaclesArray)
         {
-            foreach (GameObject item in obj.obstacle_list)
+            foreach (GameObject item in obj.obstacleList)
             {
                 item.GetComponent<ObstacleScript>().Angle = item.GetComponent<ObstacleScript>().LastAngle;
             }
@@ -110,13 +179,14 @@ public class NodeClass : MonoBehaviour {
 
     public void CreateObstacles()
     {
-        
+        float offset_acumulation = 0.0f;
         foreach (ObstacleLayer item in ObstaclesArray)
         {
-           
-            item.obstacle_list.Clear();
-            Vector3 trans = new Vector3(transform.position.x, transform.position.y + item.offset_to_node, transform.position.z);
-            string[] prefabnumber = item.obstaclesstring.Split(',');
+
+            item.obstacleList.Clear();
+            offset_acumulation += item.offsetToNode;
+            Vector3 trans = new Vector3(transform.position.x, transform.position.y + offset_acumulation, transform.position.z);
+            string[] prefabnumber = item.obstaclesString.Split(',');
 
             int i = 0;
             foreach (string obstacle in prefabnumber)
@@ -126,31 +196,33 @@ public class NodeClass : MonoBehaviour {
 
 
                 if (!(obsvalue <= 0 || obsvalue >= ObstaclesPool.Length))
+                {
+                    Quaternion rot = Quaternion.identity;
+                    if (obsvalue == 4) //star and shield
                     {
-                        Quaternion rot = Quaternion.identity;
-                        if(obsvalue == 4) //star and shield
-                        {
-                            rot = Quaternion.Euler(new Vector3(0, -90, 0));
-                        }
-                        else if(obsvalue == 9)
-                        {
+                        rot = Quaternion.Euler(new Vector3(0, -90, 0));
+                    }
+                    else if (obsvalue == 9)
+                    {
                         rot = Quaternion.Euler(new Vector3(90, 0, 0));
                     }
-                        GameObject Obstacle = Instantiate(ObstaclesPool[obsvalue], trans, rot);
-                        float angle = (i * item.obstaclesepparation);
-                        Obstacle.transform.RotateAround(transform.position, Vector3.forward, angle);
-                        Obstacle.GetComponent<ObstacleScript>().nodePosition = transform.position;
+                    GameObject Obstacle = Instantiate(ObstaclesPool[obsvalue], trans, rot);
+                    float angle = (i * item.obstacleSepparation);
+                    Obstacle.transform.RotateAround(transform.position, Vector3.forward, angle);
+                    Obstacle.GetComponent<ObstacleScript>().nodePosition = transform.position;
+                    Obstacle.GetComponent<ObstacleScript>().SetOffset(item.offsetToNode,(item.useoffsetCurve) ? item.offsetCurve : null);
 
-                        if (item.clock_direction)
-                        {
-                            Obstacle.GetComponent<ObstacleScript>().Angle = -Obstacle.GetComponent<ObstacleScript>().Angle * item.rotation_speed;
-                        }
-                        else
-                        {
-                            Obstacle.GetComponent<ObstacleScript>().Angle = Obstacle.GetComponent<ObstacleScript>().Angle * item.rotation_speed;
-                        }
-                        item.obstacle_list.Add(Obstacle);
+                    if (item.clock_direction)
+                    {
+                        Obstacle.GetComponent<ObstacleScript>().SetAngle(-item.rotationSpeed, (item.useSpeedCurve)?item.speedCurve:null);
                     }
+                    else
+                    {
+                        Obstacle.GetComponent<ObstacleScript>().SetAngle(item.rotationSpeed, (item.useSpeedCurve) ? item.speedCurve : null);
+                    }
+
+                    item.obstacleList.Add(Obstacle);
+                }
                 i++;
             }
         }
@@ -158,11 +230,11 @@ public class NodeClass : MonoBehaviour {
         {
             ChangeSpeed(player.GetComponent<Player>().save_slow_reduced);
         }
-        
+
     }
     public void LookContent()
     {
-     
+
         if (evolution_active)
         {
             EventManager.TriggerEvent("Evolution Spawn");
@@ -180,7 +252,7 @@ public class NodeClass : MonoBehaviour {
         }
         foreach (ObstacleLayer item in ObstaclesArray)
         {
-            string[] prefabnumber = item.obstaclesstring.Split(',');
+            string[] prefabnumber = item.obstaclesString.Split(',');
             foreach (string obstacle in prefabnumber)
             {
                 int obsvalue = 0;
@@ -194,4 +266,37 @@ public class NodeClass : MonoBehaviour {
             }
         }
     }
+
+    private void OnDrawGizmos()
+    {
+        float offset_acumulation = 0.0f;
+
+        foreach (ObstacleLayer item in ObstaclesArray)
+        {
+
+            offset_acumulation += item.offsetToNode;
+            Vector3 trans = new Vector3(transform.position.x, transform.position.y + offset_acumulation, transform.position.z);
+            string[] prefabnumber = item.obstaclesString.Split(',');
+
+            int i = 0;
+            foreach (string obstacle in prefabnumber)
+            {
+                int obsvalue = 0;
+                int.TryParse(obstacle, out obsvalue);
+                if (obsvalue != 0)
+                {
+
+                    float size = (ObstaclesPool[obsvalue] == null) ? 0.5f : ObstaclesPool[obsvalue].transform.localScale.x;//star and shield
+                    float angle = (i * item.obstacleSepparation);
+                    Vector3 dir = trans - transform.position; // get point direction relative to pivot
+                    dir = Quaternion.Euler(0, 0, angle) * dir; // rotate it
+                    trans = dir + transform.position; // calculate rotated point
+                    Gizmos.DrawSphere(trans, size/*ObstaclesPool[obsvalue].transform.localScale.x*/);
+                }
+                i++;
+            }
+        }
+    }
+
+
 }
