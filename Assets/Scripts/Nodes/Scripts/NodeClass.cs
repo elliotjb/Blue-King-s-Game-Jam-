@@ -12,7 +12,7 @@ public class ObstacleLayer : System.Object
     [SerializeField] AnimationCurve speed_curve = AnimationCurve.Linear(0.0f, 1.0f, 5.0f, 1.0f);
 
     [Range(1.0f, 10.0f)] [SerializeField] private float offset_to_node = 1.0f;
-    [SerializeField] AnimationCurve offset_curve = AnimationCurve.Linear(0.0f, 1.0f, 5.0f, 1.0f);
+    [SerializeField] AnimationCurve offset_curve = AnimationCurve.Linear(0.0f, 0.0f, 5.0f, 0.0f);
 
 
     private List<GameObject> obstacle_list;

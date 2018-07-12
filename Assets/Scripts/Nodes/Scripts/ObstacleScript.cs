@@ -20,19 +20,26 @@ public class ObstacleScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+
+        float offset = 1.0f;
+        Vector3 direction = transform.up;
+        if (offset_curve != null)
+        {
+            offset *= offset_curve.Evaluate(time);
+        }
+        transform.position += direction * offset * Time.deltaTime;
         float speed_rotation = Angle;
         if(speed_curve!=null)
         {
             speed_rotation *= speed_curve.Evaluate(time);
-            time += Time.deltaTime;
         }
         transform.RotateAround(nodePosition, Vector3.forward, speed_rotation * Time.deltaTime );
 
+        if(speed_curve!=null||offset_curve!=null)
+            time += Time.deltaTime;
 
-        if(offset_curve!=null)
-        {
 
-        }
         //if(Input.GetKeyDown(KeyCode.R) == true)
         //{
         //    GetComponent<Animator>().SetBool("Leave", true);
